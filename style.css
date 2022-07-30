@@ -7,6 +7,7 @@ body{
     background: #11121c;
     font-family: 'Lato', sans-serif;
     background-image: url('https://source.unsplash.com/1920x1080/?city');
+    background-repeat: no-repeat;
 }
 
 .card{
@@ -29,18 +30,57 @@ button{
     margin: 0.5em;
     border-radius: 50%;
     border: none;
-    height: 2.5em;
-    width: 2.5em;
+    height: 44px;
+    width: 44px;
     outline: none;
+    background: #6b6a6a2b;
+    color: beige;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
+
+button:hover{
+    background:#6b6a6a6b;;
 }
 
 input.search-bar{
     border: none;
     outline: none;
-    padding: 0.5em;
+    padding: 0.4em 1em;
     border-radius: 24px;
-    background: #7c7c7c2b;
+    background: #6b6a6a2b;
     color: beige;
     font-family: inherit;
-    font-size: 120%;
+    font-size: 105%;
+    width: calc(100% - 100px);
+}
+
+h1.temp{
+    margin: 0;
+    margin-bottom: 0.4em;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.description {
+    text-transform: capitalize;
+    margin-left: 8px;
+}
+
+.weather.loading {
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+}
+
+.loading:after {
+    visibility: visible;
+    content: "Loading...";
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 20px;
 }
